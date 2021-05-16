@@ -5,4 +5,6 @@ const app = express();
     app.use(express.static(__dirname + "/static"));
  
  
-app.listen(5000);
+// start the server listening for requests
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
